@@ -23,16 +23,18 @@ Kaggle Kernel is used to code the whole project. The notebook can be viewed [her
 
 ## Configuration 
 
-### Dynamic U-Net
-This is the original U-Net architecture.
+### ResNet-34 encoder + U-Net
+#### Original U-Net architecture:
 <p align="center">
 <img src="https://user-images.githubusercontent.com/27685757/71420265-4b65c000-269a-11ea-832d-7b5ed7201845.png" />
 </p>
 
-The left-part of the architecture is taken pre-trained on [Image-Net](http://image-net.org/) dataset.
+This is how the original U-Net looks like.
+
+I have used ResNet-34 encoder (pre-trained on [Image-Net](http://image-net.org/) dataset) on U-Net base. 
 
 #### Reason for the modification:
-Taking pre-trained model gives the whole training a head-start in understanding the basic image properties.
+Taking pre-trained resnet encoder gives the whole training a head-start in understanding the basic image properties.
 
 ##  Results:
 - Achieved **top 10%** of the competition's leaderboard on Validation Set with a dice score of around **0.7**.
